@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Vuln Lab — merged test page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <h1>Vulnerable Lab — Merged Page</h1>
+
+  <!-- API test area (from your original file) -->
+  <section class="box">
+    <h2>API Test</h2>
+    <button class="btn" onclick="testAPI()">Test API (alert)</button>
+    <button class="btn" onclick="fetchData()">Fetch and show JSON</button>
+    <pre id="api-response">{ /* response shown here */ }</pre>
+  </section>
+
+  <!-- Contact form (original) -->
+  <section class="box">
+    <h2>Contact Form</h2>
+    <form id="contactForm">
+      <label>Name <input name="name" required /></label>
+      <label>Message <textarea name="message" required></textarea></label>
+      <button class="btn" type="submit">Send</button>
+    </form>
+    <div id="form-response"></div>
+  </section>
+
+  <!-- UI parts used by original JS (buttons / validation) -->
+  <section class="box">
+    <h2>Buttons & Inputs</h2>
+    <button class="btn">Example button</button>
+    <input required placeholder="Blur me to see validation" />
+  </section>
+
+  <!-- ========== Vulnerable sinks (optional elements). 
+       Add/remove these from HTML as you like. ========== -->
+
+  <section class="box">
+    <h2>Deliberate XSS sinks (for testing)</h2>
+
+    <div><strong>VULN-1 (reflected)</strong>: <span id="vuln-reflected" style="display:inline-block;margin-left:8px;"></span></div>
+
+    <div style="margin-top:8px;"><strong>VULN-2 (hash)</strong>: <span id="vuln-hash"></span></div>
+
+    <div style="margin-top:8px;"><strong>VULN-3 (list)</strong>
+      <ul id="vuln-list"></ul>
+    </div>
+
+    <div style="margin-top:8px;"><strong>VULN-4 (document.write)</strong>
+      <div id="vuln-docwrite-hint">(document.write may overwrite page in some browsers)</div>
+    </div>
+
+    <div style="margin-top:8px;"><strong>VULN-5 (link href)</strong>:
+      <a id="vuln-link" href="#" target="_blank" rel="noreferrer">VULN: click me</a>
+    </div>
+
+    <div style="margin-top:8px;"><strong>VULN-6 (iframe srcdoc)</strong>
+      <iframe id="vuln-iframe"></iframe>
+    </div>
+
+    <div style="margin-top:8px;"><strong>VULN-7 (setAttribute onclick)</strong>
+      <button id="vuln-btn" class="btn">VULN button</button>
+    </div>
+
+    <div style="margin-top:8px;"><strong>VULN-8 (eval)</strong>
+      <div id="vuln-eval"></div>
+    </div>
+
+    <div style="margin-top:8px;"><strong>VULN-9 (setTimeout string)</strong>
+      <div id="vuln-timeout"></div>
+    </div>
+
+    <div style="margin-top:8px;"><strong>VULN-10 (fetch injected server HTML)</strong>
+      <div id="vuln-fetch"></div>
+    </div>
+
+    <div style="margin-top:8px;"><strong>VULN-11 (template render)</strong>
+      <div id="vuln-template"></div>
+    </div>
+
+    <div style="margin-top:8px;"><strong>VULN-12 (storage/cookie)</strong>
+      <div id="vuln-storage"></div>
+    </div>
+
+    <div style="margin-top:8px;"><strong>VULN-after-contact (shows server message unsafely)</strong>
+      <div id="vuln-after-contact"></div>
+    </div>
+
+  </section>
+
+  <!-- include the merged vulnerable JS file -->
+  <script src="script.js"></script>
+</body>
+</html>

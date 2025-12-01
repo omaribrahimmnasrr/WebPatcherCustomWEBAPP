@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuites disabled="0" errors="0" failures="0" tests="7" time="10.363338862997807">
+	<testsuite disabled="0" errors="0" failures="0" name="schemathesis" skipped="6" tests="7" time="10.363338862997807" hostname="IS-SOC-OI">
+		<testcase name="GET /" time="0.137064">
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="GET /about" time="0.050638">
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="GET /contact" time="0.071137">
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="GET /yourpage.html" time="7.827670">
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="GET /api/hello" time="0.046937">
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="POST /api/contact" time="2.119778"/>
+		<testcase name="GET /api/unsafe-html" time="0.110114">
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+	</testsuite>
+</testsuites>

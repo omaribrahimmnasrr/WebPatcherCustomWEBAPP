@@ -1,0 +1,20 @@
+{
+  "name": "mini-webapp",
+  "version": "1.0.0",
+  "description": "A simple mini web application using HTML and Node.js",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": ["webapp", "html", "nodejs", "express"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
